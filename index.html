@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E64A19">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+    <script src="js/news.js?20"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="feed-list-mobile ">
+        <ul id="slide-out" class="sidenav sidenav-fixed collapsible">
+            <li>
+                &nbsp;
+            </li>
+            <li style="position: relative">
+                <a class="waves-effect" href="#geral">Geral</a>
+                <div style="z-index: 2; position:absolute; top:0; right:0;" class="collapsible-header item-options-trigger"></div>
+                <div class="collapsible-body">
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="filled-in source" data-feed-id="1" />
+                                <span>Jornal de Notícias</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="filled-in source"  data-feed-id="2" />
+                                <span>Expresso</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="filled-in source"  data-feed-id="3"/>
+                                <span>Observador</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li style="position: relative">
+                <a class="waves-effect" href="#economia">Economia</a>
+                <div style="z-index: 2; position:absolute; top:0; right:0;" class="collapsible-header item-options-trigger"></div>
+                <div class="collapsible-body">
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="filled-in source" data-feed-id="6" />
+                                <span>Jornal de Negócios</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="filled-in source" data-feed-id="7" />
+                                <span>Dinheiro Vivo</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="filled-in source" data-feed-id="8" />
+                                <span>Jornal de Negócios - Economia</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li style="position: relative">
+                <a class="waves-effect" href="#desporto">Desporto</a>
+                <div style="z-index: 2; position:absolute; top:0; right:0;" class="collapsible-header item-options-trigger"></div>
+                <div class="collapsible-body">
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="filled-in source" data-feed-id="5" />
+                                <span>Jornal de Notícias - Desporto</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="filled-in source" data-feed-id="9" />
+                                <span>Corredores Anónimos</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li style="position: relative">
+                <a class="waves-effect" href="#tecnologia">Tecnologia</a>
+                <div style="z-index: 2; position:absolute; top:0; right:0;" class="collapsible-header item-options-trigger"></div>
+                <div class="collapsible-body">
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="filled-in source" data-feed-id="4" />
+                                <span>Sapo TEK</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li class="option">
+                <label>
+                    <input type="checkbox" class="filled-in" id="showHiddenItems" />
+                    <span>Mostra notícias escondidas</span>
+                </label>
+            </li>
+
+        </ul>
+    </div>
+    <div class="page-header">
+        <div class="search-wrapper">
+            <input id="search" placeholder="">
+            <a href="#search">
+                <i id="searchIcon" class="material-icons">search</i>
+            </a>
+        </div>
+
+        <a href="#" data-target="slide-out" class="sidenav-trigger">
+            <img class="hamburger" src="assets/menu_48x48_white.png" />
+        </a>
+    </div>
+
+    <div class="feed" id="feed">
+
+    </div>
+    <div class="progress loading-hidden" id="loading">
+        <div class="indeterminate"></div>
+    </div>
+    <div class="show-more" id="showMore">
+        Show More
+    </div>
+</body>
+<script>
+    var elem = document.querySelector('.sidenav');
+    var instance = new M.Sidenav(elem, { closeOnClick: true });
+    var elem2 = document.querySelector('.collapsible');
+    var instance2 = new M.Collapsible(elem2, {});
+
+    var news = new News(document.getElementById("showMore"));
+    news.initialize();
+</script>
+
+</html>

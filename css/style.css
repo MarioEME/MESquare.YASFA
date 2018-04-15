@@ -1,0 +1,239 @@
+.feed {
+    padding-left: 260px;
+}
+
+.show-more {
+    padding-left: 260px;
+    text-align: center;
+    margin-bottom: 200px;
+    cursor: hand;
+}
+
+.page-header {
+    background-color: #E64A19;
+}
+
+.search-wrapper {
+    margin-left: 260px;
+    margin-right: 35px;
+}
+
+@media only screen and (max-width: 992px) {
+    .show-more {
+        padding-left: 0;
+    }
+    .feed {
+        padding: 10px;
+    }
+    .feed-list-mobile {
+        background-color: #E64A19;
+        /* padding: 0.3em; */
+    }
+
+    .hamburger {
+        width: 30px;
+    }
+
+    .search-wrapper {
+        margin-left: 50px;
+        margin-right: 35px;
+    }
+}
+
+.title {
+    /* font-weight: bold; */
+    font-size: 1.2em;
+}
+
+.details {
+    font-size: 0.8em;
+    color: grey;
+}
+
+.details div {
+    display: inline-block;
+}
+
+.details .description {
+    font-size: 0.9em;
+}
+
+.item {
+    border-bottom: 1px solid #FF5722;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    animation-duration: 0.5s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+.sidenav {
+    background-color: #FF5722;
+    color: white;
+}
+
+.sidenav li a {
+    color: white;
+}
+
+.sidenav li a {
+    /* border-bottom: 1px solid white; */
+}
+
+.space {
+    width: 2em;
+    text-align: center;
+}
+
+.option span {
+    color: white;
+}
+
+[type="checkbox"].filled-in:checked+span:not(.lever):after {
+    border: 2px solid #FFC107;
+    background-color: #FFC107;
+}
+
+[type="checkbox"].filled-in:not(:checked)+span:not(.lever):after {
+    border: 2px solid #FFC107;
+}
+
+.hide-item {
+    color: rgba(0, 0, 0, 0.3);
+    font-family: Verdana, Geneva, sans-serif;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.hide-item:hover {
+    color: rgba(0, 0, 0, 0.80);
+    cursor: hand;
+}
+
+.hidden-item {
+    display: none;
+}
+
+.hidden-item div {
+    opacity: 0.7;
+}
+
+.hidden-item .hide-item {
+    display: none;
+}
+
+.loading-hidden {
+    display: none;
+}
+
+.description.hidden {
+    display: none;
+}
+
+.title {
+    display: inline;
+    cursor: hand;
+    color: black;
+}
+
+.header a img {
+    width: 1em;
+    margin-right: 1em;
+    opacity: 0.5;
+}
+
+.header {
+    /* display: table; */
+}
+
+.header a {
+    vertical-align: middle;
+}
+
+.header-left {
+    display: block;
+    margin-right: 20px;
+}
+
+.header-right {
+    float: right;
+
+}
+
+#searchIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+#search {
+    color: white;
+    border-bottom-color: white;
+    height: 2.8rem;
+}
+
+.sidenav-trigger {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.sidenav li.option {
+    padding-left: 32px;
+
+}
+
+.sidenav li.option span {
+    font-size: 1em;
+}
+
+.sidenav {
+    width: 250px;
+}
+
+
+
+.item-options-trigger:after {
+    content: '\2807';
+    font-size: 1.6em;
+}
+
+.sidenav .collapsible-header,
+.sidenav.fixed .collapsible-header {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.sidenav {
+    border: none;
+}
+
+.collapsible-body ul {
+    padding-left: 3em;
+}
+
+.collapsible-body li span {
+    font-size: 0.5em;
+}
+
+.sidenav .collapsible-body li {
+    line-height: 35px;
+}
