@@ -68,7 +68,7 @@ class Service {
                 break;
 
             case "category";
-                if(  strpos($path[2],"item") )
+                if(  strpos($path[2],"item") !== false )
                 {
                     $this->request = array(
                         "type" => "category_items",
